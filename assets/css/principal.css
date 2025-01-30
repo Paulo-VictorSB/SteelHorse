@@ -18,6 +18,10 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+.form-text {
+    font-style: italic;
+}
+
 .login-card {
     background: var(--metal-gradient);
     border-radius: 12px;

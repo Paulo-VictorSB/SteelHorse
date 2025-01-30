@@ -3,8 +3,9 @@
 define('CONTROL', true);
 
 $routes = require_once('controller/routes.php');
+$config = require_once('controller/config.php');
 
-$route = $_GET['route'] ?? 'login';
+$route = $_GET['route'] ?? 'home';
 
 if(!in_array($route, $routes)){
     $route = '404';
@@ -32,3 +33,5 @@ switch($route){
         require_once('inc/footer.php');
         break;
 }
+
+?>

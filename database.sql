@@ -22,15 +22,16 @@ USE `steelhorse_online`;
 -- Copiando estrutura para tabela steelhorse_online.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `user` varchar(50) DEFAULT NULL,
+  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
+  `password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `function` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Copiando dados para a tabela steelhorse_online.users: ~1 rows (aproximadamente)
-INSERT INTO `users` (`id`, `user`, `email`, `password`) VALUES
-	(1, 'admin', 'admin@steelhorse.com', 'admin');
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `function`) VALUES
+	(1, 'Paulo Victor', 'paulo@paulo.com', '$2y$10$k2Vo7GWHkGYUN1zN5K65peNDXGMN0Yy53MiU.ly8nFW92gkfICuaG', NULL);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
