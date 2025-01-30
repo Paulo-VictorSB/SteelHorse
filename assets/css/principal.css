@@ -1,0 +1,76 @@
+:root {
+    --steel-dark: #212B36;
+    --steel-medium: #2F3A46;
+    --steel-light: #5B6770;
+    --steel-accent: #6C8C99;
+    --steel-highlight: #D9E3E7;
+    --metal-gradient: linear-gradient(45deg, #6C8C99, #2F3A46, #212B36);
+}
+
+body {
+    background-color: var(--steel-dark);
+    color: var(--steel-highlight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-card {
+    background: var(--metal-gradient);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #333;
+}
+
+.form-control {
+    background-color: var(--steel-light);
+    border: 1px solid var(--steel-accent);
+    color: var(--steel-dark);
+    font-weight: bold;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 5px var(--steel-accent);
+    border: 1px solid var(--steel-accent);
+}
+
+.btn-primary {
+    background-color: var(--steel-accent);
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background-color: var(--steel-dark);
+    color: var(--steel-highlight);
+    transition: all 0.3s ease;
+}
+
+.form-text {
+    color: var(--steel-highlight);
+}
+
+.text-center a {
+    color: var(--steel-accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-center a:hover {
+    color: var(--steel-light);
+    text-decoration: underline;
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    color: var(--steel-highlight);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
