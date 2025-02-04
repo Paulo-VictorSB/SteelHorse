@@ -3,7 +3,8 @@
 $msgNome = "";
 $msgEmail = "";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {   
+if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+{   
     $email = trim($_POST['email']);
     $nome = trim($_POST['nome']);
     $senha = $_POST['senha'];

@@ -33,6 +33,7 @@ class user extends steelhorse_server
 {   
     private $userId;
     private $userName;
+    private $function;
     public $errorEmail = null;
     public $errorPassword = null;
     public $errorName = null;
@@ -48,6 +49,11 @@ class user extends steelhorse_server
 
     public function get_id(){
         return $this->userId;
+    }
+
+    public function get_function()
+    {
+        return $this->function;
     }
 
     public function login($email, $senha)
@@ -71,6 +77,7 @@ class user extends steelhorse_server
 
             $this->userId = $user['id'];
             $this->userName = $user['name'];
+            $this->function = $user['function'];
 
             return true;
 

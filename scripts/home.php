@@ -15,9 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     exit();
 }
 
-?>
+switch($_SESSION['function'])
+{
+    case 'admin':
+        require_once('inc/admin.php');
+        break;
+    case 'operator':
+        require_once('inc/operator.php');
+        break;
+}
 
-<h1>Bem vindo! - <?=$_SESSION['nome']?></h1>
-<form method="POST" class="my-1 mx-5">
-<button class="btn btn-primary">Deslogar</button>
-</form>
+?>  

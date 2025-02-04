@@ -78,3 +78,53 @@ h2 {
     color: var(--steel-highlight);
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--steel-dark);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
+.sidebar h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    background-color: var(--steel-light);
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background-color: #bbb;
+}
+
+.content {
+    margin-left: 250px;
+    background-color: white;
+    color: var(--steel-dark);
+    min-height: 100vh;
+}
+
+@media (max-width: 480px) {
+.login-card {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+}

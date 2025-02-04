@@ -3,7 +3,8 @@
 $msgEmail = "";
 $msgPass = "";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+{
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
@@ -23,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['isLogged'] = true;
         $_SESSION['id'] = $steelhorse_server->get_id();
         $_SESSION['nome'] = $steelhorse_server->get_name();
+        $_SESSION['function'] = $steelhorse_server->get_function();
         session_write_close();
         header("Location: ?route=home");
         exit();

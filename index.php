@@ -7,11 +7,13 @@ $config = require_once('controller/config.php');
 
 $route = $_GET['route'] ?? 'home';
 
-if(!in_array($route, $routes)){
+if(!in_array($route, $routes))
+{
     $route = '404';
 }
 
-switch($route){
+switch($route)
+{
     case '404':
         require_once('inc/header.php');
         require_once('scripts/404.php');
